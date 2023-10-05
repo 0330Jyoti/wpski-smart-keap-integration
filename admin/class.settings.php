@@ -38,15 +38,15 @@ class WPSKI_Smart_Keap_Admin_Settings {
 
 
 
-                $client_id                  = sanitize_text_field($_REQUEST['wpszi_smart_zoho_settings']['client_id']);
+                $client_id                  = sanitize_text_field($_REQUEST['wpszi_smart_Keap_settings']['client_id']);
 
 
 
-                $client_secret              = sanitize_text_field($_REQUEST['wpszi_smart_zoho_settings']['client_secret']);
+                $client_secret              = sanitize_text_field($_REQUEST['wpszi_smart_Keap_settings']['client_secret']);
 
 
 
-                $wpszi_smart_zoho_data_center  = sanitize_text_field($_REQUEST['wpszi_smart_zoho_settings']['data_center']);    
+                $wpszi_smart_Keap_data_center  = sanitize_text_field($_REQUEST['wpszi_smart_Keap_settings']['data_center']);    
 
 
 
@@ -58,7 +58,7 @@ class WPSKI_Smart_Keap_Admin_Settings {
 
 
 
-            $wpszi_smart_zoho_settings  = !empty(get_option( 'wpszi_smart_zoho_settings' )) ? get_option( 'wpszi_smart_zoho_settings' ) : array();
+            $wpszi_smart_Keap_settings  = !empty(get_option( 'wpszi_smart_Keap_settings' )) ? get_option( 'wpszi_smart_Keap_settings' ) : array();
 
 
 
@@ -66,7 +66,7 @@ class WPSKI_Smart_Keap_Admin_Settings {
 
 
 
-            $wpszi_smart_zoho_settings = array_merge($wpszi_smart_zoho_settings, $_REQUEST['wpszi_smart_zoho_settings']);
+            $wpszi_smart_Keap_settings = array_merge($wpszi_smart_Keap_settings, $_REQUEST['wpszi_smart_Keap_settings']);
 
 
 
@@ -74,7 +74,7 @@ class WPSKI_Smart_Keap_Admin_Settings {
 
 
 
-            update_option( 'wpszi_smart_zoho_settings', $wpszi_smart_zoho_settings );
+            update_option( 'wpszi_smart_Keap_settings', $wpszi_smart_Keap_settings );
 
 
 
@@ -90,7 +90,7 @@ class WPSKI_Smart_Keap_Admin_Settings {
 
 
 
-             $redirect_url = "$wpszi_smart_zoho_data_center/oauth/v2/auth?client_id=$client_id&redirect_uri=$redirect_uri&response_type=code&scope=ZohoCRM.modules.all,ZohoCRM.settings.all&access_type=offline";
+             $redirect_url = "$wpszi_smart_Keap_data_center/oauth/v2/auth?client_id=$client_id&redirect_uri=$redirect_uri&response_type=code&scope=KeapCRM.modules.all,KeapCRM.settings.all&access_type=offline";
 
             
 

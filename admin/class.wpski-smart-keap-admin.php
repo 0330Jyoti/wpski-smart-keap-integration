@@ -38,7 +38,7 @@ class WPSKI_Smart_Keap_Admin {
 
         add_action( 'wp_ajax_wp_field', array($this, 'wpski_smart_keap_wp_field_callback') );
 
-        add_action( 'wp_ajax_zoho_field', array($this, 'wpski_smart_keap_keap_field_callback') );
+        add_action( 'wp_ajax_Keap_field', array($this, 'wpski_smart_keap_keap_field_callback') );
 
         add_action( 'admin_menu', array($this, 'wpski_smart_keap_main_menu_callback') );
 
@@ -52,9 +52,9 @@ class WPSKI_Smart_Keap_Admin {
 
         $hook_array = array(
 
-                            'toplevel_page_wpszi-smart-zoho-integration',
+                            'toplevel_page_wpszi-smart-Keap-integration',
 
-                            'smart-zoho_page_wpszi-smart-zoho-mappings'
+                            'smart-Keap_page_wpszi-smart-Keap-mappings'
 
                         );
 
@@ -86,9 +86,9 @@ class WPSKI_Smart_Keap_Admin {
 
         wp_register_script( 
 
-                    'wpszi-smart-zoho-js', 
+                    'wpszi-smart-Keap-js', 
 
-                    WPSZI_PLUGIN_URL . 'admin/js/wpszi-smart-zoho.js', 
+                    WPSZI_PLUGIN_URL . 'admin/js/wpszi-smart-Keap.js', 
 
                     array(), 
 
@@ -114,9 +114,9 @@ class WPSKI_Smart_Keap_Admin {
 
         wp_register_style( 
 
-                    'wpszi-smart-zoho-style', 
+                    'wpszi-smart-Keap-style', 
 
-                    WPSZI_PLUGIN_URL . 'admin/css/wpszi-smart-zoho.css', 
+                    WPSZI_PLUGIN_URL . 'admin/css/wpszi-smart-Keap.css', 
 
                     array(), 
 
@@ -138,7 +138,7 @@ class WPSKI_Smart_Keap_Admin {
 
 
 
-        wp_localize_script( 'wpszi-smart-zoho-js', 'smart_zoho_js', $localize_array );
+        wp_localize_script( 'wpszi-smart-Keap-js', 'smart_Keap_js', $localize_array );
 
          
 
@@ -148,13 +148,13 @@ class WPSKI_Smart_Keap_Admin {
 
         wp_enqueue_script( 'jquery-dataTables-min-js' );
 
-        wp_enqueue_script( 'wpszi-smart-zoho-js' );
+        wp_enqueue_script( 'wpszi-smart-Keap-js' );
 
         
 
         wp_enqueue_style( 'jquery-dataTables-min-css' );
 
-        wp_enqueue_style( 'wpszi-smart-zoho-style' );
+        wp_enqueue_style( 'wpszi-smart-Keap-style' );
 
     }
 
@@ -176,7 +176,7 @@ class WPSKI_Smart_Keap_Admin {
 
                 case 'customers':
 
-                    $wp_fields = WPSZI_Smart_Zoho::get_customer_fields();
+                    $wp_fields = WPSZI_Smart_Keap::get_customer_fields();
 
                     break;
 
@@ -184,7 +184,7 @@ class WPSKI_Smart_Keap_Admin {
 
                 case 'orders':
 
-                    $wp_fields = WPSZI_Smart_Zoho::get_order_fields();
+                    $wp_fields = WPSZI_Smart_Keap::get_order_fields();
 
                     break;
 
@@ -192,7 +192,7 @@ class WPSKI_Smart_Keap_Admin {
 
                 case 'products':
 
-                    $wp_fields = WPSZI_Smart_Zoho::get_product_fields();
+                    $wp_fields = WPSZI_Smart_Keap::get_product_fields();
 
                     break;
 
@@ -210,7 +210,7 @@ class WPSKI_Smart_Keap_Admin {
 
        
 
-       $wp_fields_options = "<option>".esc_html__('Select WP Fields', 'wpszi-smart-zoho')."</option>";
+       $wp_fields_options = "<option>".esc_html__('Select WP Fields', 'wpszi-smart-Keap')."</option>";
 
        
 
@@ -218,7 +218,7 @@ class WPSKI_Smart_Keap_Admin {
 
             foreach ($wp_fields as $option_value => $option_label) {
 
-                $wp_fields_options .=  "<option value='".$option_value."'>".esc_html__($option_label, 'wpszi-smart-zoho')."</option>";
+                $wp_fields_options .=  "<option value='".$option_value."'>".esc_html__($option_label, 'wpszi-smart-Keap')."</option>";
 
             }
 
@@ -240,43 +240,43 @@ class WPSKI_Smart_Keap_Admin {
 
        ob_start(); 
 
-       $zoho_fields = array();
+       $Keap_fields = array();
 
 
 
-       if( isset($_REQUEST['zoho_module_name']) ){
+       if( isset($_REQUEST['Keap_module_name']) ){
 
-            $zoho_module    = $_REQUEST['zoho_module_name'];
+            $Keap_module    = $_REQUEST['Keap_module_name'];
 
-                $zoho_api_obj   = new WPSZI_Smart_Zoho_API();
+                $Keap_api_obj   = new WPSZI_Smart_Keap_API();
 
-                $zoho_fields    = $zoho_api_obj->getFieldsMetaData($zoho_module);
+                $Keap_fields    = $Keap_api_obj->getFieldsMetaData($Keap_module);
 
        }
 
        
 
-       $zoho_fields_options = "<option>".esc_html__('Select Zoho Fields', 'wpszi-smart-zoho')."</option>";
+       $Keap_fields_options = "<option>".esc_html__('Select Keap Fields', 'wpszi-smart-Keap')."</option>";
 
        
 
-       if($zoho_fields){
+       if($Keap_fields){
 
-            foreach ($zoho_fields['fields'] as $zoho_field_key => $zoho_field_data) {
+            foreach ($Keap_fields['fields'] as $Keap_field_key => $Keap_field_data) {
 
-                if($zoho_field_data['field_read_only'] == NULL){
+                if($Keap_field_data['field_read_only'] == NULL){
 
 
 
-                    $system_mandatory   = ($zoho_field_data['system_mandatory'] == 1) ? " ( Required ) " : "";
+                    $system_mandatory   = ($Keap_field_data['system_mandatory'] == 1) ? " ( Required ) " : "";
 
-                    $data_type          = isset($zoho_field_data['data_type']) ? " ( ".ucfirst($zoho_field_data['data_type'])." ) " : "";
+                    $data_type          = isset($Keap_field_data['data_type']) ? " ( ".ucfirst($Keap_field_data['data_type'])." ) " : "";
 
 
 
                     echo 
 
-                    $zoho_fields_options .= "<option value='".$zoho_field_data['api_name']."'>". esc_html__($zoho_field_data['display_label'], 'wpszi-smart-zoho') . esc_html($data_type) . esc_html($system_mandatory) . "</option>";
+                    $Keap_fields_options .= "<option value='".$Keap_field_data['api_name']."'>". esc_html__($Keap_field_data['display_label'], 'wpszi-smart-Keap') . esc_html($data_type) . esc_html($system_mandatory) . "</option>";
 
                 }
 
@@ -288,7 +288,7 @@ class WPSKI_Smart_Keap_Admin {
 
        ob_get_clean();
 
-       echo $zoho_fields_options;
+       echo $Keap_fields_options;
 
        wp_die(); 
 
@@ -402,9 +402,9 @@ class WPSKI_Smart_Keap_Admin {
 
             $code           = sanitize_text_field($_REQUEST['code']);
 
-            $zoho_api_obj   = new WPSKI_Smart_Keap_API();
+            $Keap_api_obj   = new WPSKI_Smart_Keap_API();
 
-            $token          = $zoho_api_obj->getToken( $code, WPSKI_REDIRECT_URI );
+            $token          = $Keap_api_obj->getToken( $code, WPSKI_REDIRECT_URI );
 
             
 
@@ -414,7 +414,7 @@ class WPSKI_Smart_Keap_Admin {
 
             } else {
 
-                $zoho_api_obj->manageToken( $token );    
+                $Keap_api_obj->manageToken( $token );    
 
             }
 
@@ -422,9 +422,9 @@ class WPSKI_Smart_Keap_Admin {
 
 
 
-        $smart_zoho_obj = new WPSKI_Smart_Keap();
+        $smart_Keap_obj = new WPSKI_Smart_Keap();
 
-        $smart_zoho_obj->store_required_field_mapping_data();
+        $smart_Keap_obj->store_required_field_mapping_data();
 
         
 

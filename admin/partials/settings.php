@@ -2,21 +2,21 @@
 
 	
 
-	$wpszi_smart_zoho 				= get_option( 'wpszi_smart_zoho' );
+	$wpszi_smart_Keap 				= get_option( 'wpszi_smart_Keap' );
 
-	$wpszi_smart_zoho_settings 		= get_option( 'wpszi_smart_zoho_settings' );
-
-
-
-	$client_id 						=  isset($wpszi_smart_zoho_settings['client_id']) ? $wpszi_smart_zoho_settings['client_id'] : "";
-
-	$client_secret 					= isset($wpszi_smart_zoho_settings['client_secret']) ? $wpszi_smart_zoho_settings['client_secret'] : "";
-
-	$wpszi_smart_zoho_data_center 	= isset($wpszi_smart_zoho_settings['data_center']) ? $wpszi_smart_zoho_settings['data_center'] : "";
+	$wpszi_smart_Keap_settings 		= get_option( 'wpszi_smart_Keap_settings' );
 
 
 
-	$wpszi_smart_zoho_data_center 	= ( $wpszi_smart_zoho_data_center ? $wpszi_smart_zoho_data_center : 'https://accounts.zoho.com' );
+	$client_id 						=  isset($wpszi_smart_Keap_settings['client_id']) ? $wpszi_smart_Keap_settings['client_id'] : "";
+
+	$client_secret 					= isset($wpszi_smart_Keap_settings['client_secret']) ? $wpszi_smart_Keap_settings['client_secret'] : "";
+
+	$wpszi_smart_Keap_data_center 	= isset($wpszi_smart_Keap_settings['data_center']) ? $wpszi_smart_Keap_settings['data_center'] : "";
+
+
+
+	$wpszi_smart_Keap_data_center 	= ( $wpszi_smart_Keap_data_center ? $wpszi_smart_Keap_data_center : 'https://accounts.Keap.com' );
 
 ?>
 
@@ -66,7 +66,7 @@
 
 					<tr>
 
-						<th scope="row"><label><?php echo esc_html__( 'Data Center', 'wpszi-smart-zoho' ); ?></label></th>
+						<th scope="row"><label><?php echo esc_html__( 'Data Center', 'wpszi-smart-Keap' ); ?></label></th>
 
 						<td>
 
@@ -78,11 +78,11 @@
 
 										type="radio" 
 
-										name="wpszi_smart_zoho_settings[data_center]" 
+										name="wpszi_smart_Keap_settings[data_center]" 
 
-										value="https://accounts.zoho.com"
+										value="https://accounts.Keap.com"
 
-										<?php echo esc_html( $wpszi_smart_zoho_data_center == 'https://accounts.zoho.com' ? ' checked="checked"' : '' ); ?> />
+										<?php echo esc_html( $wpszi_smart_Keap_data_center == 'https://accounts.Keap.com' ? ' checked="checked"' : '' ); ?> />
 
 										United States (US)
 
@@ -96,11 +96,11 @@
 
 										type="radio" 
 
-										name="wpszi_smart_zoho_settings[data_center]" 
+										name="wpszi_smart_Keap_settings[data_center]" 
 
-										value="https://accounts.zoho.eu"
+										value="https://accounts.Keap.eu"
 
-										<?php echo esc_html( $wpszi_smart_zoho_data_center == 'https://accounts.zoho.eu' ? ' checked="checked"' : '' ); ?> />
+										<?php echo esc_html( $wpszi_smart_Keap_data_center == 'https://accounts.Keap.eu' ? ' checked="checked"' : '' ); ?> />
 
 										Europe (EU)
 
@@ -114,11 +114,11 @@
 
 										type="radio" 
 
-										name="wpszi_smart_zoho_settings[data_center]" 
+										name="wpszi_smart_Keap_settings[data_center]" 
 
-										value="https://accounts.zoho.com.cn"
+										value="https://accounts.Keap.com.cn"
 
-										<?php echo esc_html( $wpszi_smart_zoho_data_center == 'https://accounts.zoho.com.cn' ? ' checked="checked"' : '' ); ?> />
+										<?php echo esc_html( $wpszi_smart_Keap_data_center == 'https://accounts.Keap.com.cn' ? ' checked="checked"' : '' ); ?> />
 
 										China (CN)
 
@@ -136,13 +136,13 @@
 
 						<th scope="row">
 
-							<label><?php echo esc_html__( 'Client ID', 'wpszi-smart-zoho' ); ?></label>
+							<label><?php echo esc_html__( 'Client ID', 'wpszi-smart-Keap' ); ?></label>
 
 						</th>
 
 						<td>
 
-							<input class="regular-text" type="text" name="wpszi_smart_zoho_settings[client_id]" value="<?php echo esc_attr($client_id); ?>" required />
+							<input class="regular-text" type="text" name="wpszi_smart_Keap_settings[client_id]" value="<?php echo esc_attr($client_id); ?>" required />
 
 						</td>
 
@@ -154,13 +154,13 @@
 
 						<th scope="row">
 
-							<label><?php echo esc_html__( 'Client Secret', 'wpszi-smart-zoho' ); ?></label>
+							<label><?php echo esc_html__( 'Client Secret', 'wpszi-smart-Keap' ); ?></label>
 
 						</th>
 
 						<td>
 
-							<input class="regular-text" type="text" name="wpszi_smart_zoho_settings[client_secret]" value="<?php echo esc_attr($client_secret); ?>" required />
+							<input class="regular-text" type="text" name="wpszi_smart_Keap_settings[client_secret]" value="<?php echo esc_attr($client_secret); ?>" required />
 
 						</td>
 
@@ -190,7 +190,7 @@
 
 						<th scope="row">
 
-							<label><?php echo esc_html__( 'Access Token', 'wpszi-smart-zoho' ); ?></label>
+							<label><?php echo esc_html__( 'Access Token', 'wpszi-smart-Keap' ); ?></label>
 
 						</th>
 
@@ -200,9 +200,9 @@
 
 							<?php 
 
-								if(isset($wpszi_smart_zoho->access_token)){
+								if(isset($wpszi_smart_Keap->access_token)){
 
-									echo esc_html($wpszi_smart_zoho->access_token);
+									echo esc_html($wpszi_smart_Keap->access_token);
 
 								}
 
@@ -218,7 +218,7 @@
 
 						<th scope="row">
 
-							<label><?php echo esc_html__( 'Refresh Token', 'wpszi-smart-zoho' ); ?></label>
+							<label><?php echo esc_html__( 'Refresh Token', 'wpszi-smart-Keap' ); ?></label>
 
 						</th>
 
@@ -226,9 +226,9 @@
 
 							<?php 
 
-								if(isset($wpszi_smart_zoho->refresh_token)){
+								if(isset($wpszi_smart_Keap->refresh_token)){
 
-									echo esc_html($wpszi_smart_zoho->refresh_token);
+									echo esc_html($wpszi_smart_Keap->refresh_token);
 
 								}
 
@@ -250,7 +250,7 @@
 
 				<p>
 
-					<input type='submit' class='button-primary' name="submit" value="<?php echo esc_html__( 'Save & Authorize', 'wpszi-smart-zoho' ); ?>" />
+					<input type='submit' class='button-primary' name="submit" value="<?php echo esc_html__( 'Save & Authorize', 'wpszi-smart-Keap' ); ?>" />
 
 				</p>
 
@@ -258,9 +258,9 @@
 
 				<?php 
 
-					if(isset($wpszi_smart_zoho->refresh_token)){
+					if(isset($wpszi_smart_Keap->refresh_token)){
 
-						echo '<p class="success">'.esc_html__('Authorized', 'wpszi-smart-zoho').'</p>';
+						echo '<p class="success">'.esc_html__('Authorized', 'wpszi-smart-Keap').'</p>';
 
 					}
 
@@ -274,11 +274,11 @@
 
 			<?php 
 
-				$smart_zoho_obj   = new WPSZI_Smart_Zoho();
+				$smart_Keap_obj   = new WPSZI_Smart_Keap();
 
-		        $wp_modules 	= $smart_zoho_obj->get_wp_modules();
+		        $wp_modules 	= $smart_Keap_obj->get_wp_modules();
 
-		        $getListModules = $smart_zoho_obj->get_zoho_modules();
+		        $getListModules = $smart_Keap_obj->get_Keap_modules();
 
 			?>
 
@@ -300,7 +300,7 @@
 
 						            		<tr>
 
-												<th scope="row"><label><?php echo esc_html__( "Enable {$wp_module_key} to Zoho {$singleModule['api_name']} Sync", 'wpszi-smart-zoho' ); ?></label></th>
+												<th scope="row"><label><?php echo esc_html__( "Enable {$wp_module_key} to Keap {$singleModule['api_name']} Sync", 'wpszi-smart-Keap' ); ?></label></th>
 
 												<td>
 
@@ -312,9 +312,9 @@
 
 																type="checkbox" 
 
-																name="wpszi_smart_zoho_settings[synch][<?php echo $wp_module_key.'_'.$singleModule['api_name']; ?>]" 
+																name="wpszi_smart_Keap_settings[synch][<?php echo $wp_module_key.'_'.$singleModule['api_name']; ?>]" 
 
-																<?php @checked( $wpszi_smart_zoho_settings['synch']["{$wp_module_key}_{$singleModule['api_name']}"], 1 ); ?>
+																<?php @checked( $wpszi_smart_Keap_settings['synch']["{$wp_module_key}_{$singleModule['api_name']}"], 1 ); ?>
 
 																value="1" />
 
@@ -346,7 +346,7 @@
 
 			</table>
 
-			<p><input type='submit' class='button-primary' name="submit" value="<?php echo esc_html__( 'Save', 'wpszi-smart-zoho' ); ?>" /></p>
+			<p><input type='submit' class='button-primary' name="submit" value="<?php echo esc_html__( 'Save', 'wpszi-smart-Keap' ); ?>" /></p>
 
 		
 
