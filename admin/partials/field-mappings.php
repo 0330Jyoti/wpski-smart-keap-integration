@@ -2,11 +2,11 @@
 
 
 
-<form method="post" action="<?php echo admin_url('/admin.php?page=wpszi-smart-Keap-mappings') ?>" id="wpszi-smart-Keap-mappings-form">
+<form method="post" action="<?php echo admin_url('/admin.php?page=wpski-smart-Keap-mappings') ?>" id="wpski-smart-Keap-mappings-form">
 
 
 
-    <h2><?php echo esc_html__('Fields Mapping', 'wpszi-smart-Keap'); ?></h2>
+    <h2><?php echo esc_html__('Fields Mapping', 'wpski-smart-Keap'); ?></h2>
 
 
 
@@ -18,7 +18,7 @@
 
             <th scope="row" class="titledesc">
 
-                <label><?php echo  esc_html__( 'WP Modules', 'wpszi-smart-Keap' ); ?></label>
+                <label><?php echo  esc_html__( 'WP Modules', 'wpski-smart-Keap' ); ?></label>
 
             </th>
 
@@ -26,7 +26,7 @@
 
                 <select name="wp_module">
 
-                    <option><?php echo  esc_html__('Select Module', 'wpszi-smart-Keap'); ?></option>
+                    <option><?php echo  esc_html__('Select Module', 'wpski-smart-Keap'); ?></option>
 
                     <?php 
 
@@ -36,7 +36,7 @@
 
                                 ?>            
 
-                                <option value = "<?php echo $key; ?>"><?php echo esc_html__($singleModule, 'wpszi-smart-Keap'); ?></option>
+                                <option value = "<?php echo $key; ?>"><?php echo esc_html__($singleModule, 'wpski-smart-Keap'); ?></option>
 
                                 <?php            
 
@@ -60,7 +60,7 @@
 
             <th scope="row" class="titledesc">
 
-                <label><?php echo  esc_html__( 'WP Fields', 'wpszi-smart-Keap' ); ?></label>
+                <label><?php echo  esc_html__( 'WP Fields', 'wpski-smart-Keap' ); ?></label>
 
             </th>
 
@@ -68,7 +68,7 @@
 
                 <select name="wp_field">
 
-                    <option><?php echo  esc_html__('Please select WP Modules', 'wpszi-smart-Keap'); ?></option>
+                    <option><?php echo  esc_html__('Please select WP Modules', 'wpski-smart-Keap'); ?></option>
 
                 </select>
 
@@ -84,7 +84,7 @@
 
             <th scope="row" class="titledesc">
 
-                <label><?php echo  esc_html__( 'Keap Modules', 'wpszi-smart-Keap' ); ?></label>
+                <label><?php echo  esc_html__( 'Keap Modules', 'wpski-smart-Keap' ); ?></label>
 
             </th>
 
@@ -92,7 +92,7 @@
 
                 <select name="Keap_module">
 
-                    <option><?php echo  esc_html__('Select Keap Module', 'wpszi-smart-Keap'); ?></option>
+                    <option><?php echo  esc_html__('Select Keap Module', 'wpski-smart-Keap'); ?></option>
 
                     <?php
 
@@ -110,7 +110,7 @@
 
                                 <option value = '<?php echo $singleModule['api_name']; ?>'> 
 
-                                    <?php echo  esc_html__($singleModule['plural_label'], 'wpszi-smart-Keap'); ?>
+                                    <?php echo  esc_html__($singleModule['plural_label'], 'wpski-smart-Keap'); ?>
 
                                 </option>
 
@@ -138,7 +138,7 @@
 
             <th scope="row" class="titledesc">
 
-                <label><?php echo  esc_html__( 'Keap Fields', 'wpszi-smart-Keap' ); ?></label>
+                <label><?php echo  esc_html__( 'Keap Fields', 'wpski-smart-Keap' ); ?></label>
 
             </th>
 
@@ -146,7 +146,7 @@
 
                 <select name="Keap_field">
 
-                    <option><?php echo  esc_html__('Please select Keap Modules', 'wpszi-smart-Keap'); ?></option>
+                    <option><?php echo  esc_html__('Please select Keap Modules', 'wpski-smart-Keap'); ?></option>
 
                 </select>
 
@@ -162,7 +162,7 @@
 
             <th scope="row" class="titledesc">
 
-                <label><?php echo  esc_html__( 'Status', 'wpszi-smart-Keap' ); ?></label>
+                <label><?php echo  esc_html__( 'Status', 'wpski-smart-Keap' ); ?></label>
 
             </th>
 
@@ -170,9 +170,9 @@
 
                 <select name="status">
 
-                    <option value="active"><?php echo esc_html__( 'Active', 'wpszi-smart-Keap' ); ?></option>
+                    <option value="active"><?php echo esc_html__( 'Active', 'wpski-smart-Keap' ); ?></option>
 
-                    <option value="inactive"><?php echo esc_html__( 'In Active', 'wpszi-smart-Keap' ); ?></option>
+                    <option value="inactive"><?php echo esc_html__( 'In Active', 'wpski-smart-Keap' ); ?></option>
 
                 </select>
 
@@ -188,7 +188,7 @@
 
             <th scope="row" class="titledesc">
 
-                <label><?php echo esc_html__( 'Description', 'wpszi-smart-Keap' ); ?></label>
+                <label><?php echo esc_html__( 'Description', 'wpski-smart-Keap' ); ?></label>
 
             </th>
 
@@ -208,7 +208,7 @@
 
     <p class="submit">
 
-        <input type="submit" name="add_mapping" class="button-primary woocommerce-save-button" value="<?php echo  esc_html__( 'Add Mapping', 'wpszi-smart-Keap' ); ?>">
+        <input type="submit" name="add_mapping" class="button-primary woocommerce-save-button" value="<?php echo  esc_html__( 'Add Mapping', 'wpski-smart-Keap' ); ?>">
 
     </p>
 

@@ -14,25 +14,25 @@ class WPSKI_Smart_Keap_Admin_Synchronization {
 
             if(isset($_REQUEST['tab']) && $_REQUEST['tab'] == "general"){
 
-                $client_id                  = sanitize_text_field($_REQUEST['wpszi_smart_Keap_settings']['client_id']);
+                $client_id                  = sanitize_text_field($_REQUEST['wpski_smart_Keap_settings']['client_id']);
 
-                $client_secret              = sanitize_text_field($_REQUEST['wpszi_smart_Keap_settings']['client_secret']);
+                $client_secret              = sanitize_text_field($_REQUEST['wpski_smart_Keap_settings']['client_secret']);
 
-                $wpszi_smart_Keap_data_center  = sanitize_text_field($_REQUEST['wpszi_smart_Keap_settings']['data_center']);
+                $wpski_smart_Keap_data_center  = sanitize_text_field($_REQUEST['wpski_smart_Keap_settings']['data_center']);
 
             }
 
                         
 
-            $wpszi_smart_Keap_settings  = !empty(get_option( 'wpszi_smart_Keap_settings' )) ? get_option( 'wpszi_smart_Keap_settings' ) : array();
+            $wpski_smart_Keap_settings  = !empty(get_option( 'wpski_smart_Keap_settings' )) ? get_option( 'wpski_smart_Keap_settings' ) : array();
 
 
 
-            $wpszi_smart_Keap_settings = array_merge($wpszi_smart_Keap_settings, $_REQUEST['wpszi_smart_Keap_settings']);
+            $wpski_smart_Keap_settings = array_merge($wpski_smart_Keap_settings, $_REQUEST['wpski_smart_Keap_settings']);
 
             
 
-            update_option( 'wpszi_smart_Keap_settings', $wpszi_smart_Keap_settings );
+            update_option( 'wpski_smart_Keap_settings', $wpski_smart_Keap_settings );
 
             
 
@@ -62,9 +62,9 @@ class WPSKI_Smart_Keap_Admin_Synchronization {
 
                     
 
-                    $WPSZI_Smart_Keap_Public = new WPSZI_Smart_Keap_Public();
+                    $wpski_Smart_Keap_Public = new wpski_Smart_Keap_Public();
 
-                    $WPSZI_Smart_Keap_Public->addProductToKeap( $id );
+                    $wpski_Smart_Keap_Public->addProductToKeap( $id );
 
 
 
@@ -76,9 +76,9 @@ class WPSKI_Smart_Keap_Admin_Synchronization {
 
                     
 
-                    $WPSZI_Smart_Keap_Public = new WPSZI_Smart_Keap_Public();
+                    $wpski_Smart_Keap_Public = new wpski_Smart_Keap_Public();
 
-                    $WPSZI_Smart_Keap_Public->addOrderToKeap( $id );
+                    $wpski_Smart_Keap_Public->addOrderToKeap( $id );
 
 
 
@@ -90,9 +90,9 @@ class WPSKI_Smart_Keap_Admin_Synchronization {
 
                     
 
-                    $WPSZI_Smart_Keap_Public = new WPSZI_Smart_Keap_Public();
+                    $wpski_Smart_Keap_Public = new wpski_Smart_Keap_Public();
 
-                    $WPSZI_Smart_Keap_Public->addUserToKeap( $id );
+                    $wpski_Smart_Keap_Public->addUserToKeap( $id );
 
 
 

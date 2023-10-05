@@ -20,11 +20,11 @@ class WPSKI_Smart_Keap_Deactivator
 
 
 
-		delete_option('wpszi_smart_Keap_settings');
+		delete_option('wpski_smart_Keap_settings');
 
-		delete_option('wpszi_smart_Keap');
+		delete_option('wpski_smart_Keap');
 
-		delete_option('wpszi_smart_Keap_modules_fields');
+		delete_option('wpski_smart_Keap_modules_fields');
 
 	}
 

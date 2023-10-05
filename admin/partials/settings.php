@@ -2,21 +2,21 @@
 
 	
 
-	$wpszi_smart_Keap 				= get_option( 'wpszi_smart_Keap' );
+	$wpski_smart_Keap 				= get_option( 'wpski_smart_Keap' );
 
-	$wpszi_smart_Keap_settings 		= get_option( 'wpszi_smart_Keap_settings' );
-
-
-
-	$client_id 						=  isset($wpszi_smart_Keap_settings['client_id']) ? $wpszi_smart_Keap_settings['client_id'] : "";
-
-	$client_secret 					= isset($wpszi_smart_Keap_settings['client_secret']) ? $wpszi_smart_Keap_settings['client_secret'] : "";
-
-	$wpszi_smart_Keap_data_center 	= isset($wpszi_smart_Keap_settings['data_center']) ? $wpszi_smart_Keap_settings['data_center'] : "";
+	$wpski_smart_Keap_settings 		= get_option( 'wpski_smart_Keap_settings' );
 
 
 
-	$wpszi_smart_Keap_data_center 	= ( $wpszi_smart_Keap_data_center ? $wpszi_smart_Keap_data_center : 'https://accounts.Keap.com' );
+	$client_id 						=  isset($wpski_smart_Keap_settings['client_id']) ? $wpski_smart_Keap_settings['client_id'] : "";
+
+	$client_secret 					= isset($wpski_smart_Keap_settings['client_secret']) ? $wpski_smart_Keap_settings['client_secret'] : "";
+
+	$wpski_smart_Keap_data_center 	= isset($wpski_smart_Keap_settings['data_center']) ? $wpski_smart_Keap_settings['data_center'] : "";
+
+
+
+	$wpski_smart_Keap_data_center 	= ( $wpski_smart_Keap_data_center ? $wpski_smart_Keap_data_center : 'https://accounts.Keap.com' );
 
 ?>
 
@@ -66,7 +66,7 @@
 
 					<tr>
 
-						<th scope="row"><label><?php echo esc_html__( 'Data Center', 'wpszi-smart-Keap' ); ?></label></th>
+						<th scope="row"><label><?php echo esc_html__( 'Data Center', 'wpski-smart-Keap' ); ?></label></th>
 
 						<td>
 
@@ -78,11 +78,11 @@
 
 										type="radio" 
 
-										name="wpszi_smart_Keap_settings[data_center]" 
+										name="wpski_smart_Keap_settings[data_center]" 
 
 										value="https://accounts.Keap.com"
 
-										<?php echo esc_html( $wpszi_smart_Keap_data_center == 'https://accounts.Keap.com' ? ' checked="checked"' : '' ); ?> />
+										<?php echo esc_html( $wpski_smart_Keap_data_center == 'https://accounts.Keap.com' ? ' checked="checked"' : '' ); ?> />
 
 										United States (US)
 
@@ -96,11 +96,11 @@
 
 										type="radio" 
 
-										name="wpszi_smart_Keap_settings[data_center]" 
+										name="wpski_smart_Keap_settings[data_center]" 
 
 										value="https://accounts.Keap.eu"
 
-										<?php echo esc_html( $wpszi_smart_Keap_data_center == 'https://accounts.Keap.eu' ? ' checked="checked"' : '' ); ?> />
+										<?php echo esc_html( $wpski_smart_Keap_data_center == 'https://accounts.Keap.eu' ? ' checked="checked"' : '' ); ?> />
 
 										Europe (EU)
 
@@ -114,11 +114,11 @@
 
 										type="radio" 
 
-										name="wpszi_smart_Keap_settings[data_center]" 
+										name="wpski_smart_Keap_settings[data_center]" 
 
 										value="https://accounts.Keap.com.cn"
 
-										<?php echo esc_html( $wpszi_smart_Keap_data_center == 'https://accounts.Keap.com.cn' ? ' checked="checked"' : '' ); ?> />
+										<?php echo esc_html( $wpski_smart_Keap_data_center == 'https://accounts.Keap.com.cn' ? ' checked="checked"' : '' ); ?> />
 
 										China (CN)
 
@@ -136,13 +136,13 @@
 
 						<th scope="row">
 
-							<label><?php echo esc_html__( 'Client ID', 'wpszi-smart-Keap' ); ?></label>
+							<label><?php echo esc_html__( 'Client ID', 'wpski-smart-Keap' ); ?></label>
 
 						</th>
 
 						<td>
 
-							<input class="regular-text" type="text" name="wpszi_smart_Keap_settings[client_id]" value="<?php echo esc_attr($client_id); ?>" required />
+							<input class="regular-text" type="text" name="wpski_smart_Keap_settings[client_id]" value="<?php echo esc_attr($client_id); ?>" required />
 
 						</td>
 
@@ -154,92 +154,17 @@
 
 						<th scope="row">
 
-							<label><?php echo esc_html__( 'Client Secret', 'wpszi-smart-Keap' ); ?></label>
+							<label><?php echo esc_html__( 'Client Secret', 'wpski-smart-Keap' ); ?></label>
 
 						</th>
 
 						<td>
 
-							<input class="regular-text" type="text" name="wpszi_smart_Keap_settings[client_secret]" value="<?php echo esc_attr($client_secret); ?>" required />
+							<input class="regular-text" type="text" name="wpski_smart_Keap_settings[client_secret]" value="<?php echo esc_attr($client_secret); ?>" required />
 
 						</td>
 
 					</tr>
-
-
-
-					<tr>
-
-						<th scope="row">
-
-							<label><?php echo esc_attr( 'Redirect URI', 'wpski-smart-keap' ); ?></label>
-
-						</th>
-
-						<td>
-
-							<input class="regular-text" type="text" value="<?php echo esc_url(WPSKI_REDIRECT_URI); ?>" readonly />
-
-						</td>
-
-					</tr>
-
-
-
-					<tr>
-
-						<th scope="row">
-
-							<label><?php echo esc_html__( 'Access Token', 'wpszi-smart-Keap' ); ?></label>
-
-						</th>
-
-						<td>
-
-							
-
-							<?php 
-
-								if(isset($wpszi_smart_Keap->access_token)){
-
-									echo esc_html($wpszi_smart_Keap->access_token);
-
-								}
-
-							?>
-
-						</td>
-
-					</tr>
-
-
-
-					<tr>
-
-						<th scope="row">
-
-							<label><?php echo esc_html__( 'Refresh Token', 'wpszi-smart-Keap' ); ?></label>
-
-						</th>
-
-						<td>
-
-							<?php 
-
-								if(isset($wpszi_smart_Keap->refresh_token)){
-
-									echo esc_html($wpszi_smart_Keap->refresh_token);
-
-								}
-
-							?>
-
-						</td>
-
-					</tr>
-
-					
-
 				</tbody>
 
 			</table>
@@ -250,23 +175,10 @@
 
 				<p>
 
-					<input type='submit' class='button-primary' name="submit" value="<?php echo esc_html__( 'Save & Authorize', 'wpszi-smart-Keap' ); ?>" />
+					<input type='submit' class='button-primary' name="submit" value="<?php echo esc_html__( 'Save', 'wpski-smart-Keap' ); ?>" />
 
 				</p>
 
-
-
-				<?php 
-
-					if(isset($wpszi_smart_Keap->refresh_token)){
-
-						echo '<p class="success">'.esc_html__('Authorized', 'wpszi-smart-Keap').'</p>';
-
-					}
-
-				?>
-
-			</div>
 
 
 
@@ -274,7 +186,7 @@
 
 			<?php 
 
-				$smart_Keap_obj   = new WPSZI_Smart_Keap();
+				$smart_Keap_obj   = new wpski_Smart_Keap();
 
 		        $wp_modules 	= $smart_Keap_obj->get_wp_modules();
 
@@ -300,7 +212,7 @@
 
 						            		<tr>
 
-												<th scope="row"><label><?php echo esc_html__( "Enable {$wp_module_key} to Keap {$singleModule['api_name']} Sync", 'wpszi-smart-Keap' ); ?></label></th>
+												<th scope="row"><label><?php echo esc_html__( "Enable {$wp_module_key} to Keap {$singleModule['api_name']} Sync", 'wpski-smart-Keap' ); ?></label></th>
 
 												<td>
 
@@ -312,9 +224,9 @@
 
 																type="checkbox" 
 
-																name="wpszi_smart_Keap_settings[synch][<?php echo $wp_module_key.'_'.$singleModule['api_name']; ?>]" 
+																name="wpski_smart_Keap_settings[synch][<?php echo $wp_module_key.'_'.$singleModule['api_name']; ?>]" 
 
-																<?php @checked( $wpszi_smart_Keap_settings['synch']["{$wp_module_key}_{$singleModule['api_name']}"], 1 ); ?>
+																<?php @checked( $wpski_smart_Keap_settings['synch']["{$wp_module_key}_{$singleModule['api_name']}"], 1 ); ?>
 
 																value="1" />
 
@@ -346,7 +258,7 @@
 
 			</table>
 
-			<p><input type='submit' class='button-primary' name="submit" value="<?php echo esc_html__( 'Save', 'wpszi-smart-Keap' ); ?>" /></p>
+			<p><input type='submit' class='button-primary' name="submit" value="<?php echo esc_html__( 'Save', 'wpski-smart-Keap' ); ?>" /></p>
 
 		
 

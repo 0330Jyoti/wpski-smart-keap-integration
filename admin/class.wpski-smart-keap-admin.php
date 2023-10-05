@@ -52,9 +52,9 @@ class WPSKI_Smart_Keap_Admin {
 
         $hook_array = array(
 
-                            'toplevel_page_wpszi-smart-Keap-integration',
+                            'toplevel_page_wpski-smart-Keap-integration',
 
-                            'smart-Keap_page_wpszi-smart-Keap-mappings'
+                            'smart-Keap_page_wpski-smart-Keap-mappings'
 
                         );
 
@@ -74,7 +74,7 @@ class WPSKI_Smart_Keap_Admin {
 
                     'jquery-dataTables-min-js', 
 
-                    WPSZI_PLUGIN_URL . 'admin/js/jquery.dataTables.min.js', 
+                    wpski_PLUGIN_URL . 'admin/js/jquery.dataTables.min.js', 
 
                     array(), 
 
@@ -86,9 +86,9 @@ class WPSKI_Smart_Keap_Admin {
 
         wp_register_script( 
 
-                    'wpszi-smart-Keap-js', 
+                    'wpski-smart-Keap-js', 
 
-                    WPSZI_PLUGIN_URL . 'admin/js/wpszi-smart-Keap.js', 
+                    wpski_PLUGIN_URL . 'admin/js/wpski-smart-Keap.js', 
 
                     array(), 
 
@@ -102,7 +102,7 @@ class WPSKI_Smart_Keap_Admin {
 
                     'jquery-dataTables-min-css', 
 
-                    WPSZI_PLUGIN_URL . 'admin/css/jquery.dataTables.min.css', 
+                    wpski_PLUGIN_URL . 'admin/css/jquery.dataTables.min.css', 
 
                     array(), 
 
@@ -114,9 +114,9 @@ class WPSKI_Smart_Keap_Admin {
 
         wp_register_style( 
 
-                    'wpszi-smart-Keap-style', 
+                    'wpski-smart-Keap-style', 
 
-                    WPSZI_PLUGIN_URL . 'admin/css/wpszi-smart-Keap.css', 
+                    wpski_PLUGIN_URL . 'admin/css/wpski-smart-Keap.css', 
 
                     array(), 
 
@@ -138,7 +138,7 @@ class WPSKI_Smart_Keap_Admin {
 
 
 
-        wp_localize_script( 'wpszi-smart-Keap-js', 'smart_Keap_js', $localize_array );
+        wp_localize_script( 'wpski-smart-Keap-js', 'smart_Keap_js', $localize_array );
 
          
 
@@ -148,13 +148,13 @@ class WPSKI_Smart_Keap_Admin {
 
         wp_enqueue_script( 'jquery-dataTables-min-js' );
 
-        wp_enqueue_script( 'wpszi-smart-Keap-js' );
+        wp_enqueue_script( 'wpski-smart-Keap-js' );
 
         
 
         wp_enqueue_style( 'jquery-dataTables-min-css' );
 
-        wp_enqueue_style( 'wpszi-smart-Keap-style' );
+        wp_enqueue_style( 'wpski-smart-Keap-style' );
 
     }
 
@@ -176,7 +176,7 @@ class WPSKI_Smart_Keap_Admin {
 
                 case 'customers':
 
-                    $wp_fields = WPSZI_Smart_Keap::get_customer_fields();
+                    $wp_fields = wpski_Smart_Keap::get_customer_fields();
 
                     break;
 
@@ -184,7 +184,7 @@ class WPSKI_Smart_Keap_Admin {
 
                 case 'orders':
 
-                    $wp_fields = WPSZI_Smart_Keap::get_order_fields();
+                    $wp_fields = wpski_Smart_Keap::get_order_fields();
 
                     break;
 
@@ -192,7 +192,7 @@ class WPSKI_Smart_Keap_Admin {
 
                 case 'products':
 
-                    $wp_fields = WPSZI_Smart_Keap::get_product_fields();
+                    $wp_fields = wpski_Smart_Keap::get_product_fields();
 
                     break;
 
@@ -210,7 +210,7 @@ class WPSKI_Smart_Keap_Admin {
 
        
 
-       $wp_fields_options = "<option>".esc_html__('Select WP Fields', 'wpszi-smart-Keap')."</option>";
+       $wp_fields_options = "<option>".esc_html__('Select WP Fields', 'wpski-smart-Keap')."</option>";
 
        
 
@@ -218,7 +218,7 @@ class WPSKI_Smart_Keap_Admin {
 
             foreach ($wp_fields as $option_value => $option_label) {
 
-                $wp_fields_options .=  "<option value='".$option_value."'>".esc_html__($option_label, 'wpszi-smart-Keap')."</option>";
+                $wp_fields_options .=  "<option value='".$option_value."'>".esc_html__($option_label, 'wpski-smart-Keap')."</option>";
 
             }
 
@@ -248,7 +248,7 @@ class WPSKI_Smart_Keap_Admin {
 
             $Keap_module    = $_REQUEST['Keap_module_name'];
 
-                $Keap_api_obj   = new WPSZI_Smart_Keap_API();
+                $Keap_api_obj   = new wpski_Smart_Keap_API();
 
                 $Keap_fields    = $Keap_api_obj->getFieldsMetaData($Keap_module);
 
@@ -256,7 +256,7 @@ class WPSKI_Smart_Keap_Admin {
 
        
 
-       $Keap_fields_options = "<option>".esc_html__('Select Keap Fields', 'wpszi-smart-Keap')."</option>";
+       $Keap_fields_options = "<option>".esc_html__('Select Keap Fields', 'wpski-smart-Keap')."</option>";
 
        
 
@@ -276,7 +276,7 @@ class WPSKI_Smart_Keap_Admin {
 
                     echo 
 
-                    $Keap_fields_options .= "<option value='".$Keap_field_data['api_name']."'>". esc_html__($Keap_field_data['display_label'], 'wpszi-smart-Keap') . esc_html($data_type) . esc_html($system_mandatory) . "</option>";
+                    $Keap_fields_options .= "<option value='".$Keap_field_data['api_name']."'>". esc_html__($Keap_field_data['display_label'], 'wpski-smart-Keap') . esc_html($data_type) . esc_html($system_mandatory) . "</option>";
 
                 }
 

@@ -18,35 +18,35 @@ class WPSKI_Smart_Keap_API {
 
 
 
-        $wpszi_smart_Keap_settings     = get_option( 'wpszi_smart_Keap_settings' );
+        $wpski_smart_Keap_settings     = get_option( 'wpski_smart_Keap_settings' );
 
 
 
-        $client_id                  = esc_attr($wpszi_smart_Keap_settings['client_id']);
+        $client_id                  = esc_attr($wpski_smart_Keap_settings['client_id']);
 
-        $client_secret              = esc_attr($wpszi_smart_Keap_settings['client_secret']);
+        $client_secret              = esc_attr($wpski_smart_Keap_settings['client_secret']);
 
-        $wpszi_smart_Keap_data_center  = esc_attr($wpszi_smart_Keap_settings['data_center']);
-
-
-
-        $wpszi_smart_Keap_data_center    = ( $wpszi_smart_Keap_data_center ? $wpszi_smart_Keap_data_center : 'https://accounts.Keap.com' );
+        $wpski_smart_Keap_data_center  = esc_attr($wpski_smart_Keap_settings['data_center']);
 
 
 
-        $this->url              = $wpszi_smart_Keap_data_center;
+        $wpski_smart_Keap_data_center    = ( $wpski_smart_Keap_data_center ? $wpski_smart_Keap_data_center : 'https://accounts.Keap.com' );
+
+
+
+        $this->url              = $wpski_smart_Keap_data_center;
 
         $this->client_id        = $client_id;
 
         $this->client_secret    = $client_secret;
 
-        $this->token            = get_option( 'wpszi_smart_Keap' );
+        $this->token            = get_option( 'wpski_smart_Keap' );
 
 
 
         // Get any existing copy of our transient data
 
-        if ( false === ( $wpszi_smart_Keap_expire = get_transient( 'wpszi_smart_Keap_expire' ) ) ) {
+        if ( false === ( $wpski_smart_Keap_expire = get_transient( 'wpski_smart_Keap_expire' ) ) ) {
 
             
 
@@ -64,9 +64,9 @@ class WPSKI_Smart_Keap_API {
 
     function loadAPIFiles(){
 
-        require_once WPSZI_PLUGIN_PATH . 'includes/class.getListofModules.php';
+        require_once wpski_PLUGIN_PATH . 'includes/class.getListofModules.php';
 
-        require_once WPSZI_PLUGIN_PATH . 'includes/class.getFieldsMetaData.php';
+        require_once wpski_PLUGIN_PATH . 'includes/class.getFieldsMetaData.php';
 
     }
 
@@ -190,11 +190,11 @@ class WPSKI_Smart_Keap_API {
 
             $token->access_token = $response->access_token;
 
-            $wpszi_smart_Keap_expire = 'Expire_Management';
+            $wpski_smart_Keap_expire = 'Expire_Management';
 
-            set_transient( 'wpszi_smart_Keap_expire', $wpszi_smart_Keap_expire, 3500 );
+            set_transient( 'wpski_smart_Keap_expire', $wpski_smart_Keap_expire, 3500 );
 
-            update_option( 'wpszi_smart_Keap', $token );
+            update_option( 'wpski_smart_Keap', $token );
 
         }
 
@@ -208,7 +208,7 @@ class WPSKI_Smart_Keap_API {
 
     function manageToken( $token ){
 
-        $old_token = get_option( 'wpszi_smart_Keap' );
+        $old_token = get_option( 'wpski_smart_Keap' );
 
         if ( ! isset( $token->refresh_token ) && $old_token ) {
 
@@ -220,11 +220,11 @@ class WPSKI_Smart_Keap_API {
 
         
 
-        $wpszi_smart_Keap_expire = 'Expire_Management';
+        $wpski_smart_Keap_expire = 'Expire_Management';
 
-        set_transient( 'wpszi_smart_Keap_expire', $wpszi_smart_Keap_expire, 3500 );
+        set_transient( 'wpski_smart_Keap_expire', $wpski_smart_Keap_expire, 3500 );
 
-        update_option( 'wpszi_smart_Keap', $token );
+        update_option( 'wpski_smart_Keap', $token );
 
         return true;
 
@@ -320,7 +320,7 @@ class WPSKI_Smart_Keap_API {
 
         
 
-        $url = WPSZI_KeapAPIS_URL.'/crm/v2/'.$module;
+        $url = wpski_KeapAPIS_URL.'/crm/v2/'.$module;
 
         
 
@@ -358,7 +358,7 @@ class WPSKI_Smart_Keap_API {
 
 
 
-            file_put_contents( WPSZI_PLUGIN_PATH.'debug.log', $log, FILE_APPEND );
+            file_put_contents( wpski_PLUGIN_PATH.'debug.log', $log, FILE_APPEND );
 
         }
 
@@ -396,7 +396,7 @@ class WPSKI_Smart_Keap_API {
 
         
 
-        $url = WPSZI_KeapAPIS_URL.'/crm/v2/'.$module.'/'.$record_id;
+        $url = wpski_KeapAPIS_URL.'/crm/v2/'.$module.'/'.$record_id;
 
         
 
@@ -432,7 +432,7 @@ class WPSKI_Smart_Keap_API {
 
 
 
-            file_put_contents( WPSZI_PLUGIN_PATH.'debug.log', $log, FILE_APPEND );
+            file_put_contents( wpski_PLUGIN_PATH.'debug.log', $log, FILE_APPEND );
 
         }
 

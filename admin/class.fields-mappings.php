@@ -190,7 +190,7 @@ class WPSKI_Smart_Keap_Field_Mappings {
 
 			);
 
-			wp_redirect(admin_url('admin.php?page=wpszi-smart-Keap-mappings'));
+			wp_redirect(admin_url('admin.php?page=wpski-smart-Keap-mappings'));
 
 			exit();
 
@@ -208,7 +208,7 @@ class WPSKI_Smart_Keap_Field_Mappings {
 
 
 
-        $smart_Keap_obj = new WPSZI_Smart_Keap();
+        $smart_Keap_obj = new wpski_Smart_Keap();
 
         $wp_modules 	= $smart_Keap_obj->get_wp_modules();
 
@@ -216,7 +216,7 @@ class WPSKI_Smart_Keap_Field_Mappings {
 
         
 
-       	require_once WPSZI_PLUGIN_PATH . 'admin/partials/field-mappings.php';	
+       	require_once wpski_PLUGIN_PATH . 'admin/partials/field-mappings.php';	
 
     }
 

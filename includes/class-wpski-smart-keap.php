@@ -16,7 +16,7 @@ class WPSKI_Smart_Keap {
 
 		$this->version = '1.0.0';
 
-		$this->plugin_name = 'wpszi-smart-Keap';
+		$this->plugin_name = 'wpski-smart-Keap';
 
 	}
 
@@ -60,11 +60,11 @@ class WPSKI_Smart_Keap {
 
 		return array(
 
-                'customers' => esc_html__('Customers','wpszi-smart-Keap'),
+                'customers' => esc_html__('Customers','wpski-smart-Keap'),
 
-                'orders'    => esc_html__('Orders','wpszi-smart-Keap'),
+                'orders'    => esc_html__('Orders','wpski-smart-Keap'),
 
-                'products'  => esc_html__('Products','wpszi-smart-Keap'),
+                'products'  => esc_html__('Products','wpski-smart-Keap'),
 
             );
 
@@ -76,7 +76,7 @@ class WPSKI_Smart_Keap {
 
 
 
-		$Keap_api_obj   = new WPSZI_Smart_Keap_API();
+		$Keap_api_obj   = new wpski_Smart_Keap_API();
 
        
 
@@ -100,63 +100,63 @@ class WPSKI_Smart_Keap {
 
 		$wc_fields = array(
 
-		    'first_name'            => esc_html__('First Name', 'wpszi-smart-Keap'),
+		    'first_name'            => esc_html__('First Name', 'wpski-smart-Keap'),
 
-		    'last_name'             => esc_html__('Last Name', 'wpszi-smart-Keap'),
+		    'last_name'             => esc_html__('Last Name', 'wpski-smart-Keap'),
 
-		    'user_email'            => esc_html__('Email', 'wpszi-smart-Keap'),
+		    'user_email'            => esc_html__('Email', 'wpski-smart-Keap'),
 
-		    'billing_first_name'    => esc_html__('Billing First Name', 'wpszi-smart-Keap'),
+		    'billing_first_name'    => esc_html__('Billing First Name', 'wpski-smart-Keap'),
 
-		    'billing_last_name'     => esc_html__('Billing Last Name', 'wpszi-smart-Keap'),
+		    'billing_last_name'     => esc_html__('Billing Last Name', 'wpski-smart-Keap'),
 
-		    'billing_company'       => esc_html__('Billing Company', 'wpszi-smart-Keap'),
+		    'billing_company'       => esc_html__('Billing Company', 'wpski-smart-Keap'),
 
-		    'billing_address_1'     => esc_html__('Billing Address 1', 'wpszi-smart-Keap'),
+		    'billing_address_1'     => esc_html__('Billing Address 1', 'wpski-smart-Keap'),
 
-		    'billing_address_2'     => esc_html__('Billing Address 2', 'wpszi-smart-Keap'),
+		    'billing_address_2'     => esc_html__('Billing Address 2', 'wpski-smart-Keap'),
 
-		    'billing_city'          => esc_html__('Billing City', 'wpszi-smart-Keap'),
+		    'billing_city'          => esc_html__('Billing City', 'wpski-smart-Keap'),
 
-		    'billing_state'         => esc_html__('Billing State', 'wpszi-smart-Keap'),
+		    'billing_state'         => esc_html__('Billing State', 'wpski-smart-Keap'),
 
-		    'billing_postcode'      => esc_html__('Billing Postcode', 'wpszi-smart-Keap'),
+		    'billing_postcode'      => esc_html__('Billing Postcode', 'wpski-smart-Keap'),
 
-		    'billing_country'       => esc_html__('Billing Country', 'wpszi-smart-Keap'),
+		    'billing_country'       => esc_html__('Billing Country', 'wpski-smart-Keap'),
 
-		    'billing_phone'         => esc_html__('Billing Phone', 'wpszi-smart-Keap'),
+		    'billing_phone'         => esc_html__('Billing Phone', 'wpski-smart-Keap'),
 
-		    'billing_email'         => esc_html__('Billing Email', 'wpszi-smart-Keap'),
+		    'billing_email'         => esc_html__('Billing Email', 'wpski-smart-Keap'),
 
-		    'shipping_first_name'   => esc_html__('Shipping First Name', 'wpszi-smart-Keap'),
+		    'shipping_first_name'   => esc_html__('Shipping First Name', 'wpski-smart-Keap'),
 
-		    'shipping_last_name'    => esc_html__('Shipping Last Name', 'wpszi-smart-Keap'),
+		    'shipping_last_name'    => esc_html__('Shipping Last Name', 'wpski-smart-Keap'),
 
-		    'shipping_company'      => esc_html__('Shipping Company', 'wpszi-smart-Keap'),
+		    'shipping_company'      => esc_html__('Shipping Company', 'wpski-smart-Keap'),
 
-		    'shipping_address_1'    => esc_html__('Shipping Address 1', 'wpszi-smart-Keap'),
+		    'shipping_address_1'    => esc_html__('Shipping Address 1', 'wpski-smart-Keap'),
 
-		    'shipping_address_2'    => esc_html__('Shipping Address 2', 'wpszi-smart-Keap'),
+		    'shipping_address_2'    => esc_html__('Shipping Address 2', 'wpski-smart-Keap'),
 
-		    'shipping_city'         => esc_html__('Shipping City', 'wpszi-smart-Keap'),
+		    'shipping_city'         => esc_html__('Shipping City', 'wpski-smart-Keap'),
 
-		    'shipping_postcode'     => esc_html__('Shipping Postcode', 'wpszi-smart-Keap'),
+		    'shipping_postcode'     => esc_html__('Shipping Postcode', 'wpski-smart-Keap'),
 
-		    'shipping_country'      => esc_html__('Shipping Country', 'wpszi-smart-Keap'),
+		    'shipping_country'      => esc_html__('Shipping Country', 'wpski-smart-Keap'),
 
-		    'shipping_state'        => esc_html__('Shipping State', 'wpszi-smart-Keap'),
+		    'shipping_state'        => esc_html__('Shipping State', 'wpski-smart-Keap'),
 
-		    'user_url'              => esc_html__('Website', 'wpszi-smart-Keap'),
+		    'user_url'              => esc_html__('Website', 'wpski-smart-Keap'),
 
-		    'description'           => esc_html__('Biographical Info', 'wpszi-smart-Keap'),
+		    'description'           => esc_html__('Biographical Info', 'wpski-smart-Keap'),
 
-		    'display_name'          => esc_html__('Display name publicly as', 'wpszi-smart-Keap'),
+		    'display_name'          => esc_html__('Display name publicly as', 'wpski-smart-Keap'),
 
-		    'nickname'              => esc_html__('Nickname', 'wpszi-smart-Keap'),
+		    'nickname'              => esc_html__('Nickname', 'wpski-smart-Keap'),
 
-		    'user_login'            => esc_html__('Username', 'wpszi-smart-Keap'),
+		    'user_login'            => esc_html__('Username', 'wpski-smart-Keap'),
 
-		    'user_registered'       => esc_html__('Registration Date', 'wpszi-smart-Keap')
+		    'user_registered'       => esc_html__('Registration Date', 'wpski-smart-Keap')
 
 		);
 
@@ -182,145 +182,145 @@ class WPSKI_Smart_Keap {
 
         $wc_fields =  array(
 
-                'get_id'                       => esc_html__('Order Number', 'wpszi-smart-Keap'),
+                'get_id'                       => esc_html__('Order Number', 'wpski-smart-Keap'),
 
-                'get_order_key'                => esc_html__('Order Key', 'wpszi-smart-Keap'),
+                'get_order_key'                => esc_html__('Order Key', 'wpski-smart-Keap'),
 
-                'get_billing_first_name'       => esc_html__('Billing First Name', 'wpszi-smart-Keap'),
+                'get_billing_first_name'       => esc_html__('Billing First Name', 'wpski-smart-Keap'),
 
-                'get_billing_last_name'        => esc_html__('Billing Last Name', 'wpszi-smart-Keap'),
+                'get_billing_last_name'        => esc_html__('Billing Last Name', 'wpski-smart-Keap'),
 
-                'get_billing_company'          => esc_html__('Billing Company', 'wpszi-smart-Keap'),
+                'get_billing_company'          => esc_html__('Billing Company', 'wpski-smart-Keap'),
 
-                'get_billing_address_1'        => esc_html__('Billing Address 1', 'wpszi-smart-Keap'),
+                'get_billing_address_1'        => esc_html__('Billing Address 1', 'wpski-smart-Keap'),
 
-                'get_billing_address_2'        => esc_html__('Billing Address 2', 'wpszi-smart-Keap'),
+                'get_billing_address_2'        => esc_html__('Billing Address 2', 'wpski-smart-Keap'),
 
-                'get_billing_city'             => esc_html__('Billing City', 'wpszi-smart-Keap'),
+                'get_billing_city'             => esc_html__('Billing City', 'wpski-smart-Keap'),
 
-                'get_billing_state'            => esc_html__('Billing State', 'wpszi-smart-Keap'),
+                'get_billing_state'            => esc_html__('Billing State', 'wpski-smart-Keap'),
 
-                'get_billing_postcode'         => esc_html__('Billing Postcode', 'wpszi-smart-Keap'),
+                'get_billing_postcode'         => esc_html__('Billing Postcode', 'wpski-smart-Keap'),
 
-                'get_billing_country'          => esc_html__('Billing Country', 'wpszi-smart-Keap'), 
+                'get_billing_country'          => esc_html__('Billing Country', 'wpski-smart-Keap'), 
 
-                'get_billing_phone'            => esc_html__('Billing Phone', 'wpszi-smart-Keap'),
+                'get_billing_phone'            => esc_html__('Billing Phone', 'wpski-smart-Keap'),
 
-                'get_billing_email'            => esc_html__('Billing Email', 'wpszi-smart-Keap'),
+                'get_billing_email'            => esc_html__('Billing Email', 'wpski-smart-Keap'),
 
-                'get_shipping_first_name'      => esc_html__('Shipping First Name', 'wpszi-smart-Keap'),
+                'get_shipping_first_name'      => esc_html__('Shipping First Name', 'wpski-smart-Keap'),
 
-                'get_shipping_last_name'       => esc_html__('Shipping Last Name', 'wpszi-smart-Keap'),
+                'get_shipping_last_name'       => esc_html__('Shipping Last Name', 'wpski-smart-Keap'),
 
-                'get_shipping_company'         => esc_html__('Shipping Company', 'wpszi-smart-Keap'),
+                'get_shipping_company'         => esc_html__('Shipping Company', 'wpski-smart-Keap'),
 
-                'get_shipping_address_1'       => esc_html__('Shipping Address 1', 'wpszi-smart-Keap'),
+                'get_shipping_address_1'       => esc_html__('Shipping Address 1', 'wpski-smart-Keap'),
 
-                'get_shipping_address_2'       => esc_html__('Shipping Address 2', 'wpszi-smart-Keap'),
+                'get_shipping_address_2'       => esc_html__('Shipping Address 2', 'wpski-smart-Keap'),
 
-                'get_shipping_city'            => esc_html__('Shipping City', 'wpszi-smart-Keap'),
+                'get_shipping_city'            => esc_html__('Shipping City', 'wpski-smart-Keap'),
 
-                'get_shipping_state'           => esc_html__('Shipping State', 'wpszi-smart-Keap'),
+                'get_shipping_state'           => esc_html__('Shipping State', 'wpski-smart-Keap'),
 
-                'get_shipping_postcode'        => esc_html__('Shipping Postcode', 'wpszi-smart-Keap'),
+                'get_shipping_postcode'        => esc_html__('Shipping Postcode', 'wpski-smart-Keap'),
 
-                'get_shipping_country'         => esc_html__('Shipping Country',  'wpszi-smart-Keap'),
+                'get_shipping_country'         => esc_html__('Shipping Country',  'wpski-smart-Keap'),
 
-                'get_formatted_order_total'     => esc_html__('Formatted Order Total', 'wpszi-smart-Keap'),
+                'get_formatted_order_total'     => esc_html__('Formatted Order Total', 'wpski-smart-Keap'),
 
-                'get_cart_tax'                  => esc_html__('Cart Tax', 'wpszi-smart-Keap'),
+                'get_cart_tax'                  => esc_html__('Cart Tax', 'wpski-smart-Keap'),
 
-                'get_currency'                  => esc_html__('Currency', 'wpszi-smart-Keap'),
+                'get_currency'                  => esc_html__('Currency', 'wpski-smart-Keap'),
 
-                'get_discount_tax'              => esc_html__('Discount Tax', 'wpszi-smart-Keap'),
+                'get_discount_tax'              => esc_html__('Discount Tax', 'wpski-smart-Keap'),
 
-                'get_discount_to_display'       => esc_html__('Discount to Display', 'wpszi-smart-Keap'),
+                'get_discount_to_display'       => esc_html__('Discount to Display', 'wpski-smart-Keap'),
 
-                'get_discount_total'            => esc_html__('Discount Total', 'wpszi-smart-Keap'),
+                'get_discount_total'            => esc_html__('Discount Total', 'wpski-smart-Keap'),
 
-                'get_shipping_tax'              => esc_html__('Shipping Tax', 'wpszi-smart-Keap'),
+                'get_shipping_tax'              => esc_html__('Shipping Tax', 'wpski-smart-Keap'),
 
-                'get_shipping_total'            => esc_html__('Shipping Total', 'wpszi-smart-Keap'),
+                'get_shipping_total'            => esc_html__('Shipping Total', 'wpski-smart-Keap'),
 
-                'get_subtotal'                  => esc_html__('SubTotal', 'wpszi-smart-Keap'),
+                'get_subtotal'                  => esc_html__('SubTotal', 'wpski-smart-Keap'),
 
-                'get_subtotal_to_display'       => esc_html__('SubTotal to Display', 'wpszi-smart-Keap'),
+                'get_subtotal_to_display'       => esc_html__('SubTotal to Display', 'wpski-smart-Keap'),
 
-                'get_total'                     => esc_html__('Get Total', 'wpszi-smart-Keap'),
+                'get_total'                     => esc_html__('Get Total', 'wpski-smart-Keap'),
 
-                'get_total_discount'            => esc_html__('Get Total Discount', 'wpszi-smart-Keap'),
+                'get_total_discount'            => esc_html__('Get Total Discount', 'wpski-smart-Keap'),
 
-                'get_total_tax'                 => esc_html__('Total Tax', 'wpszi-smart-Keap'),
+                'get_total_tax'                 => esc_html__('Total Tax', 'wpski-smart-Keap'),
 
-                'get_total_refunded'            => esc_html__('Total Refunded', 'wpszi-smart-Keap'),
+                'get_total_refunded'            => esc_html__('Total Refunded', 'wpski-smart-Keap'),
 
-                'get_total_tax_refunded'        => esc_html__('Total Tax Refunded', 'wpszi-smart-Keap'),
+                'get_total_tax_refunded'        => esc_html__('Total Tax Refunded', 'wpski-smart-Keap'),
 
-                'get_total_shipping_refunded'   => esc_html__('Total Shipping Refunded', 'wpszi-smart-Keap'),
+                'get_total_shipping_refunded'   => esc_html__('Total Shipping Refunded', 'wpski-smart-Keap'),
 
-                'get_item_count_refunded'       => esc_html__('Item count refunded', 'wpszi-smart-Keap'),
+                'get_item_count_refunded'       => esc_html__('Item count refunded', 'wpski-smart-Keap'),
 
-                'get_total_qty_refunded'        => esc_html__('Total Quantity Refunded', 'wpszi-smart-Keap'),
+                'get_total_qty_refunded'        => esc_html__('Total Quantity Refunded', 'wpski-smart-Keap'),
 
-                'get_remaining_refund_amount'   => esc_html__('Remaining Refund Amount', 'wpszi-smart-Keap'),
+                'get_remaining_refund_amount'   => esc_html__('Remaining Refund Amount', 'wpski-smart-Keap'),
 
-                'get_item_count'                => esc_html__('Item count', 'wpszi-smart-Keap'),
+                'get_item_count'                => esc_html__('Item count', 'wpski-smart-Keap'),
 
-                'get_shipping_method'           => esc_html__('Shipping Method', 'wpszi-smart-Keap'),
+                'get_shipping_method'           => esc_html__('Shipping Method', 'wpski-smart-Keap'),
 
-                'get_shipping_to_display'       => esc_html__('Shipping to Display', 'wpszi-smart-Keap'),
+                'get_shipping_to_display'       => esc_html__('Shipping to Display', 'wpski-smart-Keap'),
 
-                'get_date_created'              => esc_html__('Date Created', 'wpszi-smart-Keap'),
+                'get_date_created'              => esc_html__('Date Created', 'wpski-smart-Keap'),
 
-                'get_date_modified'             => esc_html__('Date Modified', 'wpszi-smart-Keap'),
+                'get_date_modified'             => esc_html__('Date Modified', 'wpski-smart-Keap'),
 
-                'get_date_completed'            => esc_html__('Date Completed', 'wpszi-smart-Keap'),
+                'get_date_completed'            => esc_html__('Date Completed', 'wpski-smart-Keap'),
 
-                'get_date_paid'                 => esc_html__('Date Paid', 'wpszi-smart-Keap'),
+                'get_date_paid'                 => esc_html__('Date Paid', 'wpski-smart-Keap'),
 
-                'get_customer_id'               => esc_html__('Customer ID', 'wpszi-smart-Keap'),
+                'get_customer_id'               => esc_html__('Customer ID', 'wpski-smart-Keap'),
 
-                'get_user_id'                   => esc_html__('User ID', 'wpszi-smart-Keap'),
+                'get_user_id'                   => esc_html__('User ID', 'wpski-smart-Keap'),
 
-                'get_customer_ip_address'       => esc_html__('Customer IP Address', 'wpszi-smart-Keap'),
+                'get_customer_ip_address'       => esc_html__('Customer IP Address', 'wpski-smart-Keap'),
 
-                'get_customer_user_agent'       => esc_html__('Customer User Agent', 'wpszi-smart-Keap'),
+                'get_customer_user_agent'       => esc_html__('Customer User Agent', 'wpski-smart-Keap'),
 
-                'get_created_via'               => esc_html__('Order Created Via', 'wpszi-smart-Keap'),
+                'get_created_via'               => esc_html__('Order Created Via', 'wpski-smart-Keap'),
 
-                'get_customer_note'             => esc_html__('Customer Note', 'wpszi-smart-Keap'),
+                'get_customer_note'             => esc_html__('Customer Note', 'wpski-smart-Keap'),
 
-                'get_shipping_address_map_url'  => esc_html__('Shipping Address Map URL', 'wpszi-smart-Keap'),
+                'get_shipping_address_map_url'  => esc_html__('Shipping Address Map URL', 'wpski-smart-Keap'),
 
-                'get_formatted_billing_full_name'   => esc_html__('Formatted Billing Full Name', 'wpszi-smart-Keap'),
+                'get_formatted_billing_full_name'   => esc_html__('Formatted Billing Full Name', 'wpski-smart-Keap'),
 
-                'get_formatted_shipping_full_name'  => esc_html__('Formatted Shipping Full Name', 'wpszi-smart-Keap'),
+                'get_formatted_shipping_full_name'  => esc_html__('Formatted Shipping Full Name', 'wpski-smart-Keap'),
 
-                'get_formatted_billing_address'     => esc_html__('Formatted Billing Address', 'wpszi-smart-Keap'),
+                'get_formatted_billing_address'     => esc_html__('Formatted Billing Address', 'wpski-smart-Keap'),
 
-                'get_formatted_shipping_address'    => esc_html__('Formatted Shipping Address', 'wpszi-smart-Keap'),
+                'get_formatted_shipping_address'    => esc_html__('Formatted Shipping Address', 'wpski-smart-Keap'),
 
-                'get_payment_method'            => esc_html__('Payment Method', 'wpszi-smart-Keap'),
+                'get_payment_method'            => esc_html__('Payment Method', 'wpski-smart-Keap'),
 
-                'get_payment_method_title'      => esc_html__('Payment Method Title', 'wpszi-smart-Keap'),
+                'get_payment_method_title'      => esc_html__('Payment Method Title', 'wpski-smart-Keap'),
 
-                'get_transaction_id'            => esc_html__('Transaction ID', 'wpszi-smart-Keap'),
+                'get_transaction_id'            => esc_html__('Transaction ID', 'wpski-smart-Keap'),
 
-                'get_checkout_payment_url'      => esc_html__( 'Checkout Payment URL', 'wpszi-smart-Keap'),
+                'get_checkout_payment_url'      => esc_html__( 'Checkout Payment URL', 'wpski-smart-Keap'),
 
-                'get_checkout_order_received_url'   => esc_html__('Checkout Order Received URL', 'wpszi-smart-Keap'),
+                'get_checkout_order_received_url'   => esc_html__('Checkout Order Received URL', 'wpski-smart-Keap'),
 
-                'get_cancel_order_url'          => esc_html__('Cancel Order URL', 'wpszi-smart-Keap'),
+                'get_cancel_order_url'          => esc_html__('Cancel Order URL', 'wpski-smart-Keap'),
 
-                'get_cancel_order_url_raw'      => esc_html__('Cancel Order URL Raw', 'wpszi-smart-Keap'),
+                'get_cancel_order_url_raw'      => esc_html__('Cancel Order URL Raw', 'wpski-smart-Keap'),
 
-                'get_cancel_endpoint'           => esc_html__('Cancel Endpoint', 'wpszi-smart-Keap'),
+                'get_cancel_endpoint'           => esc_html__('Cancel Endpoint', 'wpski-smart-Keap'),
 
-                'get_view_order_url'            => esc_html__('View Order URL', 'wpszi-smart-Keap'),
+                'get_view_order_url'            => esc_html__('View Order URL', 'wpski-smart-Keap'),
 
-                'get_edit_order_url'            => esc_html__('Edit Order URL', 'wpszi-smart-Keap'),
+                'get_edit_order_url'            => esc_html__('Edit Order URL', 'wpski-smart-Keap'),
 
-                'get_status'                    => esc_html__('Status', 'wpszi-smart-Keap'),
+                'get_status'                    => esc_html__('Status', 'wpski-smart-Keap'),
 
             );
 
@@ -340,79 +340,79 @@ class WPSKI_Smart_Keap {
 
 		$wc_fields = array(
 
-		    'get_id'              		=> esc_html__('Product Id', 'wpszi-smart-Keap'),
+		    'get_id'              		=> esc_html__('Product Id', 'wpski-smart-Keap'),
 
-            'get_type'       			=> esc_html__('Product Type', 'wpszi-smart-Keap'),
+            'get_type'       			=> esc_html__('Product Type', 'wpski-smart-Keap'),
 
-            'get_name'       			=> esc_html__('Name', 'wpszi-smart-Keap'),
+            'get_name'       			=> esc_html__('Name', 'wpski-smart-Keap'),
 
-            'get_slug'          		=> esc_html__('Slug', 'wpszi-smart-Keap'),
+            'get_slug'          		=> esc_html__('Slug', 'wpski-smart-Keap'),
 
-            'get_date_created'      	=> esc_html__('Date Created', 'wpszi-smart-Keap'),
+            'get_date_created'      	=> esc_html__('Date Created', 'wpski-smart-Keap'),
 
-            'get_date_modified'     	=> esc_html__('Date Modified', 'wpszi-smart-Keap'),
+            'get_date_modified'     	=> esc_html__('Date Modified', 'wpski-smart-Keap'),
 
-            'get_status'            	=> esc_html__('Status', 'wpszi-smart-Keap'),
+            'get_status'            	=> esc_html__('Status', 'wpski-smart-Keap'),
 
-            'get_featured'          	=> esc_html__('Featured', 'wpszi-smart-Keap'),
+            'get_featured'          	=> esc_html__('Featured', 'wpski-smart-Keap'),
 
-            'get_catalog_visibility'	=> esc_html__('Catalog Visibility', 'wpszi-smart-Keap'),
+            'get_catalog_visibility'	=> esc_html__('Catalog Visibility', 'wpski-smart-Keap'),
 
-            'get_description'       	=> esc_html__('Description', 'wpszi-smart-Keap'),
+            'get_description'       	=> esc_html__('Description', 'wpski-smart-Keap'),
 
-            'get_short_description' 	=> esc_html__('Short Description', 'wpszi-smart-Keap'),
+            'get_short_description' 	=> esc_html__('Short Description', 'wpski-smart-Keap'),
 
-            'get_sku'            		=> esc_html__('Sku', 'wpszi-smart-Keap'),
+            'get_sku'            		=> esc_html__('Sku', 'wpski-smart-Keap'),
 
-            'get_menu_order'      		=> esc_html__('Menu Order', 'wpszi-smart-Keap'),
+            'get_menu_order'      		=> esc_html__('Menu Order', 'wpski-smart-Keap'),
 
-            'get_virtual'       		=> esc_html__('Virtual', 'wpszi-smart-Keap'),
+            'get_virtual'       		=> esc_html__('Virtual', 'wpski-smart-Keap'),
 
-            'get_permalink'         	=> esc_html__('Product Permalink', 'wpszi-smart-Keap'),
+            'get_permalink'         	=> esc_html__('Product Permalink', 'wpski-smart-Keap'),
 
-            'get_price'       			=> esc_html__('Price', 'wpszi-smart-Keap'),
+            'get_price'       			=> esc_html__('Price', 'wpski-smart-Keap'),
 
-            'get_regular_price'       	=> esc_html__('Regular Price', 'wpszi-smart-Keap'),
+            'get_regular_price'       	=> esc_html__('Regular Price', 'wpski-smart-Keap'),
 
-            'get_sale_price'            => esc_html__('Sale Price', 'wpszi-smart-Keap'),
+            'get_sale_price'            => esc_html__('Sale Price', 'wpski-smart-Keap'),
 
-            'get_date_on_sale_from'     => esc_html__('Date on Sale From', 'wpszi-smart-Keap'),
+            'get_date_on_sale_from'     => esc_html__('Date on Sale From', 'wpski-smart-Keap'),
 
-            'get_date_on_sale_to'       => esc_html__('Date on Sale To', 'wpszi-smart-Keap'),
+            'get_date_on_sale_to'       => esc_html__('Date on Sale To', 'wpski-smart-Keap'),
 
-            'get_total_sales'         	=> esc_html__('Total Sales', 'wpszi-smart-Keap'),
+            'get_total_sales'         	=> esc_html__('Total Sales', 'wpski-smart-Keap'),
 
-            'get_tax_status'     		=> esc_html__('Tax Status', 'wpszi-smart-Keap'),
+            'get_tax_status'     		=> esc_html__('Tax Status', 'wpski-smart-Keap'),
 
-            'get_tax_class'           	=> esc_html__('Tax Class', 'wpszi-smart-Keap'),
+            'get_tax_class'           	=> esc_html__('Tax Class', 'wpski-smart-Keap'),
 
-            'get_manage_stock'          => esc_html__('Manage Stock', 'wpszi-smart-Keap'),
+            'get_manage_stock'          => esc_html__('Manage Stock', 'wpski-smart-Keap'),
 
-            'get_stock_quantity'        => esc_html__('Stock Quantity', 'wpszi-smart-Keap'),
+            'get_stock_quantity'        => esc_html__('Stock Quantity', 'wpski-smart-Keap'),
 
-            'get_stock_status'          => esc_html__('Stock Status', 'wpszi-smart-Keap'),
+            'get_stock_status'          => esc_html__('Stock Status', 'wpski-smart-Keap'),
 
-            'get_backorders'       		=> esc_html__('Backorders', 'wpszi-smart-Keap'),
+            'get_backorders'       		=> esc_html__('Backorders', 'wpski-smart-Keap'),
 
-            'get_sold_individually'     => esc_html__('Sold Individually', 'wpszi-smart-Keap'),
+            'get_sold_individually'     => esc_html__('Sold Individually', 'wpski-smart-Keap'),
 
-            'get_purchase_note'         => esc_html__('Purchase Note', 'wpszi-smart-Keap'),
+            'get_purchase_note'         => esc_html__('Purchase Note', 'wpski-smart-Keap'),
 
-            'get_shipping_class_id'     => esc_html__('Shipping Class ID', 'wpszi-smart-Keap'),
+            'get_shipping_class_id'     => esc_html__('Shipping Class ID', 'wpski-smart-Keap'),
 
-            'get_weight'               	=> esc_html__('Weight', 'wpszi-smart-Keap'),
+            'get_weight'               	=> esc_html__('Weight', 'wpski-smart-Keap'),
 
-            'get_length'              	=> esc_html__('Length', 'wpszi-smart-Keap'),
+            'get_length'              	=> esc_html__('Length', 'wpski-smart-Keap'),
 
-            'get_width'            		=> esc_html__('Width', 'wpszi-smart-Keap'),
+            'get_width'            		=> esc_html__('Width', 'wpski-smart-Keap'),
 
-            'get_height'            	=> esc_html__('Height', 'wpszi-smart-Keap'),
+            'get_height'            	=> esc_html__('Height', 'wpski-smart-Keap'),
 
-            'get_categories'            => esc_html__('Categories', 'wpszi-smart-Keap'),
+            'get_categories'            => esc_html__('Categories', 'wpski-smart-Keap'),
 
-            'get_category_ids'          => esc_html__('Categories IDs', 'wpszi-smart-Keap'),
+            'get_category_ids'          => esc_html__('Categories IDs', 'wpski-smart-Keap'),
 
-            'get_tag_ids'            	=> esc_html__('Tag IDs', 'wpszi-smart-Keap'),
+            'get_tag_ids'            	=> esc_html__('Tag IDs', 'wpski-smart-Keap'),
 
 		);
 
@@ -430,7 +430,7 @@ class WPSKI_Smart_Keap {
 
         global $wpdb;
 
-        $Keap_api_obj   = new WPSZI_Smart_Keap_API();
+        $Keap_api_obj   = new wpski_Smart_Keap_API();
 
         $wp_modules     = $this->get_wp_modules();
 

@@ -30,9 +30,9 @@ class Customers_Listk extends WP_List_Table{
 
     public function __construct(){
 
-        parent::__construct(['singular'     => esc_html__('Customer', 'wpszi-smart-Keap') , //singular name of the listed records
+        parent::__construct(['singular'     => esc_html__('Customer', 'wpski-smart-Keap') , //singular name of the listed records
 
-        'plural'                            => esc_html__('Customers', 'wpszi-smart-Keap') , //plural name of the listed records
+        'plural'                            => esc_html__('Customers', 'wpski-smart-Keap') , //plural name of the listed records
 
         'ajax'                              => true
 
@@ -146,7 +146,7 @@ class Customers_Listk extends WP_List_Table{
 
     public function no_items(){
 
-        echo esc_html__('No customers avaliable.', 'wpszi-smart-Keap');
+        echo esc_html__('No customers avaliable.', 'wpski-smart-Keap');
 
     }
 
@@ -226,7 +226,7 @@ class Customers_Listk extends WP_List_Table{
 
                         <input name="id" value="'.esc_attr($item['ID']).'" type="hidden" />
 
-                        <button class="button" name="smart_synch" value="Keap" type="submit">'.esc_html__('Sync', 'wpszi-smart-Keap').'</button>
+                        <button class="button" name="smart_synch" value="Keap" type="submit">'.esc_html__('Sync', 'wpski-smart-Keap').'</button>
 
                 </form>';
 
@@ -250,15 +250,15 @@ class Customers_Listk extends WP_List_Table{
 
         $columns = [
 
-                'ID'                  => esc_html__('Id', 'wpszi-smart-Keap') , 
+                'ID'                  => esc_html__('Id', 'wpski-smart-Keap') , 
 
-                'woocommerce_name'    => esc_html__('Name', 'wpszi-smart-Keap') , 
+                'woocommerce_name'    => esc_html__('Name', 'wpski-smart-Keap') , 
 
-                'user_email'          => esc_html__('Email', 'wpszi-smart-Keap') , 
+                'user_email'          => esc_html__('Email', 'wpski-smart-Keap') , 
 
-                'user_registered'     => esc_html__('Create Time', 'wpszi-smart-Keap') , 
+                'user_registered'     => esc_html__('Create Time', 'wpski-smart-Keap') , 
 
-                'action'              => esc_html__('Action', 'wpszi-smart-Keap') 
+                'action'              => esc_html__('Action', 'wpski-smart-Keap') 
 
             ];
 

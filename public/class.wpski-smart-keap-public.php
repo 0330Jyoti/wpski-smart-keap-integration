@@ -68,9 +68,9 @@ class WPSKI_Smart_Keap_Public {
 
 
 
-        $wpszi_smart_Keap_settings = get_option( 'wpszi_smart_Keap_settings' );
+        $wpski_smart_Keap_settings = get_option( 'wpski_smart_Keap_settings' );
 
-        $synch_settings         = !empty( $wpszi_smart_Keap_settings['synch'] ) ? $wpszi_smart_Keap_settings['synch'] : array();
+        $synch_settings         = !empty( $wpski_smart_Keap_settings['synch'] ) ? $wpski_smart_Keap_settings['synch'] : array();
 
 
 
@@ -162,9 +162,9 @@ class WPSKI_Smart_Keap_Public {
 
 
 
-        $wpszi_smart_Keap_settings = get_option( 'wpszi_smart_Keap_settings' );
+        $wpski_smart_Keap_settings = get_option( 'wpski_smart_Keap_settings' );
 
-        $synch_settings         = !empty( $wpszi_smart_Keap_settings['synch'] ) ? $wpszi_smart_Keap_settings['synch'] : array();
+        $synch_settings         = !empty( $wpski_smart_Keap_settings['synch'] ) ? $wpski_smart_Keap_settings['synch'] : array();
 
 
 
@@ -252,9 +252,9 @@ class WPSKI_Smart_Keap_Public {
 
 
 
-        $wpszi_smart_Keap_settings = get_option( 'wpszi_smart_Keap_settings' );
+        $wpski_smart_Keap_settings = get_option( 'wpski_smart_Keap_settings' );
 
-        $synch_settings         = !empty( $wpszi_smart_Keap_settings['synch'] ) ? $wpszi_smart_Keap_settings['synch'] : array();
+        $synch_settings         = !empty( $wpski_smart_Keap_settings['synch'] ) ? $wpski_smart_Keap_settings['synch'] : array();
 
 
 
@@ -352,7 +352,7 @@ class WPSKI_Smart_Keap_Public {
 
 
 
-        $Keap_api_obj   = new WPSZI_Smart_Keap_API();
+        $Keap_api_obj   = new wpski_Smart_Keap_API();
 
         
 

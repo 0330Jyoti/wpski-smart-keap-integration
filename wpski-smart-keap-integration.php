@@ -94,11 +94,11 @@ if (! defined('WPSKI_KEAPAPIS_URL') ) {
 
     $tld = "com";
 
-    //$wpszi_smart_Keap_settings  = get_option( 'wpszi_smart_Keap_settings' );
+    //$wpski_smart_Keap_settings  = get_option( 'wpski_smart_Keap_settings' );
 
-    //if( !empty($wpszi_smart_Keap_settings['data_center'])){
+    //if( !empty($wpski_smart_Keap_settings['data_center'])){
 
-        //$tld = end(explode(".", parse_url( $wpszi_smart_Keap_settings['data_center'], PHP_URL_HOST)));
+        //$tld = end(explode(".", parse_url( $wpski_smart_Keap_settings['data_center'], PHP_URL_HOST)));
 
     //}
 
@@ -124,7 +124,7 @@ function wpski_smart_keap_activate() {
 
  * The code that runs during plugin deactivation.
 
- * This action is documented in includes/class-wpszi-smart-Keap-deactivator.php
+ * This action is documented in includes/class-wpski-smart-Keap-deactivator.php
 
  */
 

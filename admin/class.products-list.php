@@ -18,9 +18,9 @@ class Product_Listk extends WP_List_Table {
 
 		parent::__construct( [
 
-			'singular' => esc_html__( 'Order', 'wpszi-smart-Keap' ), //singular name of the listed records
+			'singular' => esc_html__( 'Order', 'wpski-smart-Keap' ), //singular name of the listed records
 
-			'plural'   => esc_html__( 'Orders', 'wpszi-smart-Keap' ), //plural name of the listed records
+			'plural'   => esc_html__( 'Orders', 'wpski-smart-Keap' ), //plural name of the listed records
 
 			'ajax'     => true //does this table support ajax?
 
@@ -112,7 +112,7 @@ class Product_Listk extends WP_List_Table {
 
 	public function no_items() {
 
-		echo esc_html__( 'No products avaliable.', 'wpszi-smart-Keap' );
+		echo esc_html__( 'No products avaliable.', 'wpski-smart-Keap' );
 
 	}
 
@@ -186,7 +186,7 @@ class Product_Listk extends WP_List_Table {
 
 						<input name="product_sku" value="'.esc_attr($product->get_sku($item['ID'])).'" type="hidden" />
 
-						<button class="button" name="smart_synch" value="Keap" type="submit">'.esc_html__('Sync', 'wpszi-smart-Keap').'</button>
+						<button class="button" name="smart_synch" value="Keap" type="submit">'.esc_html__('Sync', 'wpski-smart-Keap').'</button>
 
 					</form>';
 
@@ -210,15 +210,15 @@ class Product_Listk extends WP_List_Table {
 
 		$columns = [
 
-			'ID'    => esc_html__( 'Product Id', 'wpszi-smart-Keap' ),
+			'ID'    => esc_html__( 'Product Id', 'wpski-smart-Keap' ),
 
-			'post_title'    => esc_html__( 'Product Name', 'wpszi-smart-Keap' ),
+			'post_title'    => esc_html__( 'Product Name', 'wpski-smart-Keap' ),
 
-			'meta_value'    => esc_html__( 'Sku', 'wpszi-smart-Keap' ),
+			'meta_value'    => esc_html__( 'Sku', 'wpski-smart-Keap' ),
 
-			'post_date'    => esc_html__( 'Create Time', 'wpszi-smart-Keap' ),
+			'post_date'    => esc_html__( 'Create Time', 'wpski-smart-Keap' ),
 
-			'action'    => esc_html__( 'Action', 'wpszi-smart-Keap' )
+			'action'    => esc_html__( 'Action', 'wpski-smart-Keap' )
 
 		];
 
