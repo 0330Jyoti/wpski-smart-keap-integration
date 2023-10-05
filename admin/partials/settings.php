@@ -63,75 +63,7 @@
 			<table class="form-table general_settings">
 
 				<tbody>
-
-					<tr>
-
-						<th scope="row"><label><?php echo esc_html__( 'Data Center', 'wpski-smart-Keap' ); ?></label></th>
-
-						<td>
-
-							<fieldset>
-
-								<label>
-
-									<input 
-
-										type="radio" 
-
-										name="wpski_smart_Keap_settings[data_center]" 
-
-										value="https://accounts.Keap.com"
-
-										<?php echo esc_html( $wpski_smart_Keap_data_center == 'https://accounts.Keap.com' ? ' checked="checked"' : '' ); ?> />
-
-										United States (US)
-
-								</label><br>
-
-
-
-								<label>
-
-									<input 
-
-										type="radio" 
-
-										name="wpski_smart_Keap_settings[data_center]" 
-
-										value="https://accounts.Keap.eu"
-
-										<?php echo esc_html( $wpski_smart_Keap_data_center == 'https://accounts.Keap.eu' ? ' checked="checked"' : '' ); ?> />
-
-										Europe (EU)
-
-								</label><br>
-
-
-
-								<label>
-
-									<input 
-
-										type="radio" 
-
-										name="wpski_smart_Keap_settings[data_center]" 
-
-										value="https://accounts.Keap.com.cn"
-
-										<?php echo esc_html( $wpski_smart_Keap_data_center == 'https://accounts.Keap.com.cn' ? ' checked="checked"' : '' ); ?> />
-
-										China (CN)
-
-								</label>
-
-							</fieldset>
-
-						</td>
-
-					</tr>
-
-
-
+					
 					<tr>
 
 						<th scope="row">
