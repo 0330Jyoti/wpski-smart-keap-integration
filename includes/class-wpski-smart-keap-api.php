@@ -64,9 +64,9 @@ class WPSKI_Smart_Keap_API {
 
     function loadAPIFiles(){
 
-        require_once wpski_PLUGIN_PATH . 'includes/class.getListofModules.php';
+        require_once WPSKI_PLUGIN_PATH . 'includes/class.getListofModules.php';
 
-        require_once wpski_PLUGIN_PATH . 'includes/class.getFieldsMetaData.php';
+        require_once WPSKI_PLUGIN_PATH . 'includes/class.getFieldsMetaData.php';
 
     }
 
@@ -150,9 +150,9 @@ class WPSKI_Smart_Keap_API {
 
             'client_secret' => $this->client_secret,
 
-            'grant_type'    => 'refresh_token',
+            // 'grant_type'    => 'refresh_token',
 
-            'refresh_token' => $token->refresh_token,
+            // 'refresh_token' => $token->refresh_token,
 
         );
 

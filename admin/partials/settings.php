@@ -12,11 +12,11 @@
 
 	$client_secret 					= isset($wpski_smart_Keap_settings['client_secret']) ? $wpski_smart_Keap_settings['client_secret'] : "";
 
-	$wpski_smart_Keap_data_center 	= isset($wpski_smart_Keap_settings['data_center']) ? $wpski_smart_Keap_settings['data_center'] : "";
+	// $wpski_smart_Keap_data_center 	= isset($wpski_smart_Keap_settings['data_center']) ? $wpski_smart_Keap_settings['data_center'] : "";
 
 
 
-	$wpski_smart_Keap_data_center 	= ( $wpski_smart_Keap_data_center ? $wpski_smart_Keap_data_center : 'https://accounts.Keap.com' );
+	// $wpski_smart_Keap_data_center 	= ( $wpski_smart_Keap_data_center ? $wpski_smart_Keap_data_center : 'https://accounts.Keap.com' );
 
 ?>
 

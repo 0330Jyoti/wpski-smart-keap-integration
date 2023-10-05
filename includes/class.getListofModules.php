@@ -4,49 +4,24 @@ class GetListofModules{
 
     
 
-    public function execute($token){
-
-        $url = WPSKI_KEAPAPIS_URL."/crm/v2/settings/modules";
-
-        
-
-        $curl = curl_init();
-
-        $authtoken = array('Authorization: Keap-oauthtoken '.$token->access_token);
-
-        curl_setopt_array($curl, array(
-
-          CURLOPT_URL => $url,
-
-          CURLOPT_RETURNTRANSFER => true,
-
-          CURLOPT_ENCODING => '',
-
-          CURLOPT_MAXREDIRS => 10,
-
-          CURLOPT_TIMEOUT => 0,
-
-          CURLOPT_FOLLOWLOCATION => true,
-
-          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-
-          CURLOPT_CUSTOMREQUEST => 'GET',
-
-          CURLOPT_HTTPHEADER => $authtoken,
-
-        ));
+    public function execute(){
+        $getListofModules = array(
+            'modules' => array(
+                    'key1' => array(
+                 'creatable' => 1,
+                 'deletable' => 1,
+                 'api_name' => 'lead',
+             ),
+                    'key2' => array(
+                        'creatable' => 1,
+                        'deletable' => 1,
+                        'api_name' => 'lead',
+                    ),
+            )
+        );
 
 
-
-        $response = curl_exec($curl);
-
-        $response = json_decode($response, true);
-
-        curl_close($curl);
-
-
-
-        return $response;
+        return $getListofModules;
 
     }
 
