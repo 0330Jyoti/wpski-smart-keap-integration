@@ -22,23 +22,23 @@ class WPSKI_Smart_Keap_API {
 
 
 
-        $client_id                  = esc_attr($wpski_smart_Keap_settings['client_id']);
+        // $client_id                  = esc_attr($wpski_smart_Keap_settings['client_id']);
 
-        $client_secret              = esc_attr($wpski_smart_Keap_settings['client_secret']);
+        // $client_secret              = esc_attr($wpski_smart_Keap_settings['client_secret']);
 
-        $wpski_smart_Keap_data_center  = esc_attr($wpski_smart_Keap_settings['data_center']);
-
-
-
-        $wpski_smart_Keap_data_center    = ( $wpski_smart_Keap_data_center ? $wpski_smart_Keap_data_center : 'https://accounts.Keap.com' );
+        // $wpski_smart_Keap_data_center  = esc_attr($wpski_smart_Keap_settings['data_center']);
 
 
 
-        $this->url              = $wpski_smart_Keap_data_center;
+        // $wpski_smart_Keap_data_center    = ( $wpski_smart_Keap_data_center ? $wpski_smart_Keap_data_center : 'https://accounts.Keap.com' );
 
-        $this->client_id        = $client_id;
 
-        $this->client_secret    = $client_secret;
+
+        // $this->url              = $wpski_smart_Keap_data_center;
+
+        // $this->client_id        = $client_id;
+
+        // $this->client_secret    = $client_secret;
 
         $this->token            = get_option( 'wpski_smart_Keap' );
 
